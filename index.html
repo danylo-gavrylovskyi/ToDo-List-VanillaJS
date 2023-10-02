@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script async src="https://kit.fontawesome.com/2c34aac46e.js" crossorigin="anonymous"></script>
+    <link href="styles/style.css" rel="stylesheet" />
+    <title>ToDo List</title>
+  </head>
+  <body>
+    <h1>Todo</h1>
+    <div id="add-task-div">
+      <button onclick="addTask()"><i class="fa-solid fa-plus"></i></button
+      ><input id="task-title-input" placeholder="Add a task" />
+    </div>
+
+    <div id="remove-btns">
+      <button onclick="removeCompleted()" id="remove-completed-btn">Remove completed</button>
+      <button onclick="removeAllTasks()" id="remove-all-btn">Remove all</button>
+    </div>
+
+    <main>
+      <p id="uncompleted-tasks-count"></p>
+      <div id="tasks"></div>
+
+      <p id="completed-tasks-count"></p>
+      <div id="completed"></div>
+    </main>
+
+    <script async src="scripts/index.js"></script>
+  </body>
+</html>
