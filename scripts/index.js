@@ -70,6 +70,11 @@ const exitEditingMode = (title, input, checkbox, saveBtn) => {
 };
 
 const editTask = (id, title, input, checkbox, saveBtn) => {
+  if (!title.value) {
+    alert('Enter task title');
+    return;
+  }
+
   tasks = tasks.map((task) =>
     task.id === id ? { ...task, title: input.value, date: new Date().toLocaleString() } : task,
   );
