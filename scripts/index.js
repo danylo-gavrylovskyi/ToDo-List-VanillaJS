@@ -70,7 +70,7 @@ const exitEditingMode = (title, input, checkbox, saveBtn) => {
 };
 
 const editTask = (id, title, input, checkbox, saveBtn) => {
-  if (!title.value) {
+  if (!input.value) {
     alert('Enter task title');
     return;
   }
