@@ -93,7 +93,7 @@ const enterEditingMode = (id) => {
 
   saveBtn.addEventListener('click', () => editTask(id, title, input, checkbox, saveBtn));
 
-  input.addEventListener('keypress', (e) => {
+  input.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
       editTask(id, title, input, checkbox, saveBtn);
     } else if (e.key === 'Escape') {
@@ -102,7 +102,14 @@ const enterEditingMode = (id) => {
   });
 };
 
-titleInput.addEventListener('keypress', (e) => e.key === 'Enter' && addTask());
+titleInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    addTask();
+  } else if (e.key === 'Escape') {
+    titleInput.value = '';
+    titleInput.blur();
+  }
+});
 
 const getTaskLayout = ({ id, title, date }) => `<section>
 <div class="task-left-side">
