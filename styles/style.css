@@ -72,13 +72,17 @@ input:focus {
   margin: 2% 0;
 }
 
-#remove-completed-btn {
+#remove-completed-btn,
+#clear-storage-btn,
+#pick-todo-btn {
   background-color: var(--contrast-color);
   margin-right: 2%;
   transition: border-color 0.2s background-color 0.2s;
 }
 
-#remove-completed-btn:hover {
+#remove-completed-btn:hover,
+#clear-storage-btn:hover,
+#pick-todo-btn:hover {
   border-color: var(--contrast-color-hover);
   background-color: var(--contrast-color-hover);
 }
@@ -183,4 +187,35 @@ input[type='checkbox'] {
 
 .save-edited-task i {
   color: var(--contrast-color);
+}
+
+#sort {
+  width: 50%;
+  margin-bottom: 2%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#sort-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: white;
+  transition: color 0.2s;
+}
+
+#sort-btn:hover {
+  color: var(--contrast-color);
+}
+
+#clear-storage-div {
+  width: 50%;
+  margin-top: 1%;
+}
+
+#clear-storage-btn,
+#pick-todo-btn {
+  border: 1px solid var(--contrast-color);
+  border-radius: 5px;
+  padding: 1%;
 }

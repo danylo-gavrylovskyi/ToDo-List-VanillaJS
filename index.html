@@ -9,6 +9,9 @@
   </head>
   <body>
     <h1>Todo</h1>
+
+    <div id="clear-storage-div"><button id="clear-storage-btn">Clear storage</button></div>
+
     <div id="add-task-div">
       <button onclick="addTask()"><i class="fa-solid fa-plus"></i></button
       ><input id="task-title-input" placeholder="Add a task" />
@@ -19,6 +22,11 @@
       <button onclick="removeAllTasks()" id="remove-all-btn">Remove all</button>
     </div>
 
+    <div id="sort">
+      <button id="pick-todo-btn">Pick todo</button>
+      <button id="sort-btn"></button>
+    </div>
+
     <main>
       <p id="uncompleted-tasks-count"></p>
       <div id="tasks"></div>
@@ -27,6 +35,6 @@
       <div id="completed"></div>
     </main>
 
-    <script async src="scripts/index.js"></script>
+    <script async src="scripts/updatedIndex.js"></script>
   </body>
 </html>
